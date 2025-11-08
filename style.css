@@ -1,0 +1,65 @@
+/* Style général */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Barre de navigation */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Liste horizontale */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Élément de liste */
+.navbar li {
+  margin: 0 20px;
+}
+
+/* Liens */
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 15px 0;
+  display: inline-block;
+  position: relative;
+}
+
+/* Ligne soulignée */
+.navbar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: width .3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Soulignement au survol */
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* Espace pour le contenu sous la nav */
+main {
+  padding-top: 80px;
+  text-align: center;
+}
